@@ -60,10 +60,11 @@
         }
 
         #myVideo{
+            position: relative;
             display: block;
             height: 500px;
             width: 1000px;
-            z-index: 1;
+            z-index: -1000;
 
         }
         #container{
@@ -114,7 +115,7 @@
             color: yellow;
             font-weight: 800;
             letter-spacing: 1px;
-            border: 1px solid #003366;
+            border: 1px solid #3399cc;
             cursor: pointer;
         }
 
@@ -411,7 +412,7 @@
     //chuyen video
     function chuyenVideo(){
         if(currentIndex == 11){
-            document.getElementById("checkrs").display = "block";
+            hienThiKetQua();
         }else{
             currentIndex++;
             const newDiv = document.createElement("div");

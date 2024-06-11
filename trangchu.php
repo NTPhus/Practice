@@ -17,7 +17,9 @@
 
 </head>
 <body>
-<?php include 'header.php' ?>
+<?php
+    include 'header.php';
+ ?>
 
 <div class="container">
        <!-- START - LUA CHON  -->
@@ -85,7 +87,7 @@
 
                                 <label for="">
                                     <p>Hạng</p>
-                                    <p>B, C, D, E</p>
+                                    <p>B1</p>
                                 </label>
                                 <div class="content_body">
                                     <p>ÔN TẬP TRONG 5 GIỜ</p>

@@ -100,11 +100,11 @@
 
 
 
-table{
+/* table{
     margin-top: 50px;
     width: 300px;
     height: 500px;
-}
+} */
 
 tr{
     text-align: center;
