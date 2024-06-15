@@ -1,3 +1,7 @@
+<?php 
+    include("session.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,9 @@
     <title>Document</title>
     <style>
         .app_themDe{
+            position: relative;
             margin-bottom: 50px;
+            z-index: 5;
         }
     .themDeLyThuyet,
     .themDeMoPhong {
@@ -22,11 +28,16 @@
     overflow: scroll;
 }
 .themDeLyThuyet{
-    margin-left: 15px;
+    margin-left: 70px;
+    width: 600px;
+    height: 650px;
 }
 
 .themDeMoPhong{
+    margin-left: 50px;
     margin-right: 1px;
+    width: 600px;
+    height: 650px;
 }
 
 
@@ -67,10 +78,20 @@
 .themDeMoPhong input[type="submit"]:hover {
     background-color: #0056b3; 
 }
+
+.block{
+    display: flex;
+}
+
+.app_themDe{
+    display: inline-flex;
+}
     </style>
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <div class="block">
+    <?php include 'sidebar.php'?>
     <div class="app_themDe">
     <div class="themDeLyThuyet">
         
@@ -80,7 +101,7 @@
             <?php 
                 for($i = 1; $i <= 30; $i++){
                     echo "<p>Câu $i</p>";
-                    echo "<input type='number' name='cau$i'>";
+                    echo "<input type='number' name='cau$i' required>";
                 }
             ?>
             <input type="submit" name="" id="themDeLyThuyetBtn" value="Thêm đề">
@@ -94,13 +115,15 @@
             <?php 
                 for($i = 1; $i <= 10; $i++){
                     echo "<p>Câu $i</p>";
-                    echo "<input type='number' name='cau$i'>";
+                    echo "<input type='number' name='cau$i' required>";
                 }
             ?>
             <input type="submit" name="" id="themDeMoPhongBtn" value="Thêm đề">
         </form>
     </div>
     </div>
+    </div>
+    
     <?php include 'footer.php'; ?>
 </body>
 </html>
